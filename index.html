@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="robot-box">
+        <img src="https://i.ibb.co/QF3Gb36z/image.png" alt="Robot AI">
+    </div>
+
+    <h2>
+        TRẦN NGUYỄN GIA HUY<br>
+        LIÊN HỆ ZALO: 0969 047 869
+    </h2>
+
+    <div class="input-group">
+        <span class="icon">🔑</span>
+        <input id="key" type="text" placeholder="Nhập key kích hoạt">
+    </div>
+
+    <button type="button" class="btn-login" onclick="checkKey()">
+        KÍCH HOẠT
+    </button>
+</div>
+
+<script>
+    // 🔐 KEY DUY NHẤT
+    const MASTER_KEY = "gh";
+
+    function checkKey() {
+        const inputKey = document.getElementById("key").value.trim();
+
+        if (!inputKey) {
+            alert("Vui lòng nhập key");
+            return;
+        }
+
+        if (inputKey === MASTER_KEY) {
+            localStorage.setItem("activated", "true");
+            alert("Kích hoạt thành công!");
+            window.location.href = "menu.html";
+        } else {
+            alert("Key sai kìa địt mẹ mày");
+        }
+    }
+</script>
+
+</body>
+</html>

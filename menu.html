@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tools - Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <div class="header">
+        <img src="https://i.ibb.co/QF3Gb36z/image.png" class="avatar">
+        <div class="info">
+            <h3>bo may trum sunwin</h3>
+            <p>trumtaixiugiahuydzaivcl</p>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="menu-item">
+            🤖 <span>Dự đoán kết quả TX</span>
+        </div>
+        <div class="menu-item">
+            📊 <span>Phân tích dữ liệu</span>
+        </div>
+        <div class="menu-item">
+            🔮 <span>AI dự đoán nâng cao</span>
+        </div>
+        <div class="menu-item">
+            📜 <span>Lịch sử dự đoán</span>
+        </div>
+        <div class="menu-item">
+            ⚙️ <span>Cài đặt</span>
+        </div>
+        <div class="menu-item logout" onclick="logout()">
+            🚪 <span>Đăng xuất</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // 🚫 CHẶN VÀO MENU NẾU CHƯA KÍCH HOẠT KEY
+    if (localStorage.getItem("activated") !== "true") {
+        window.location.href = "index.html";
+    }
+
+    // 🚪 ĐĂNG XUẤT
+    function logout() {
+        localStorage.removeItem("activated");
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>
